@@ -1,0 +1,41 @@
+# Zhivaldo Fabio H.
+# 71200608
+
+'''
+Offense = Kevin, Bagas, Inzhagi, Revy, Tuki, Mirage, Wraith
+Defense = Gibraltar, Wraith, Wattson, Caustic, Mirage, Rampart, Bagas, Tuki, Jamal
+Scout = Viper, Bloho, Sukijan, Kevin, Wraith, Rampart, Padidi, Mirage
+
+Bantulah coach Pablo mengumpulkan nama yang :
+a. Bisa bermain Offense dan Scout
+b. Hanya Bisa bermain Defense
+c. Bisa Multitasking (Ketiganya)
+d. Bukan Sweaty
+
+Input = Data set yang sudah diketahui
+Process = Pemisahan dan Penggabungan data
+Output = Hasil dari Gabungan dan Irisan data
+'''
+
+Offense = {'Kevin', 'Bagas', 'Inzhagi', 'Revy', 'Tuki', 'Mirage', 'Wraith'}
+Defense = {'Gibraltar', 'Wraith', 'Wattson', 'Caustic', 'Mirage', 'Rampart', 'Bagas', 'Tuki', 'Jamal'}
+Scout = {'Viper', 'Bloho', 'Sukijan', 'Kevin', 'Wraith', 'Rampart', 'Padidi', 'Mirage'}
+
+# Bagian A 
+print('Pemain yang Bisa Offense dan Scout')
+Sweaty = Offense & Scout
+print (Sweaty,'\n')
+
+# Bagian B 
+print ('Pemain yang Hanya Fokus Defense')
+Defender = Defense - Offense - Scout
+print (Defender,'\n')
+
+# Bagian C 
+print ('Pemain yang bisa Multitasking')
+Multitask = Offense & Defense & Scout
+print (Multitask, '\n')
+
+print ('Pemain yang bukan sweaty')
+nonmulti = (Offense ^ Scout)
+print (nonmulti,'\n')
